@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
     <Compile Include="AZS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
       <DependentUpon>THH_add.cs</DependentUpon>
     </Compile>
     <Compile Include="Znach.cs" />
+    <EmbeddedResource Include="Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AZS.resx">
       <DependentUpon>AZS.cs</DependentUpon>
     </EmbeddedResource>

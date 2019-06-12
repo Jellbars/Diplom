@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Фамилия = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Имя = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,14 +47,7 @@
             this.Телефон = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_должности = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_статуса = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,56 +75,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1048, 300);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Фамилия
-            // 
-            this.Фамилия.HeaderText = "Фамилия";
-            this.Фамилия.Name = "Фамилия";
-            // 
-            // Имя
-            // 
-            this.Имя.HeaderText = "Имя";
-            this.Имя.Name = "Имя";
-            // 
-            // Отчество
-            // 
-            this.Отчество.HeaderText = "Отчество";
-            this.Отчество.Name = "Отчество";
-            // 
-            // Адрес
-            // 
-            this.Адрес.HeaderText = "Адрес";
-            this.Адрес.Name = "Адрес";
-            // 
-            // Паспорт
-            // 
-            this.Паспорт.HeaderText = "Паспорт";
-            this.Паспорт.Name = "Паспорт";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Телефон
-            // 
-            this.Телефон.HeaderText = "Телефон";
-            this.Телефон.Name = "Телефон";
-            // 
-            // ID_должности
-            // 
-            this.ID_должности.HeaderText = "ID_должности";
-            this.ID_должности.Name = "ID_должности";
-            // 
-            // ID_статуса
-            // 
-            this.ID_статуса.HeaderText = "ID_статуса";
-            this.ID_статуса.Name = "ID_статуса";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.AllowMerge = false;
@@ -135,7 +86,8 @@
             this.toolStripTextBox1,
             this.toolStripComboBox1,
             this.toolStripTextBox2,
-            this.поискToolStripMenuItem});
+            this.поискToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -197,6 +149,66 @@
             this.поискToolStripMenuItem.Text = "Поиск";
             this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Фамилия
+            // 
+            this.Фамилия.HeaderText = "Фамилия";
+            this.Фамилия.Name = "Фамилия";
+            // 
+            // Имя
+            // 
+            this.Имя.HeaderText = "Имя";
+            this.Имя.Name = "Имя";
+            // 
+            // Отчество
+            // 
+            this.Отчество.HeaderText = "Отчество";
+            this.Отчество.Name = "Отчество";
+            // 
+            // Адрес
+            // 
+            this.Адрес.HeaderText = "Адрес";
+            this.Адрес.Name = "Адрес";
+            // 
+            // Паспорт
+            // 
+            this.Паспорт.HeaderText = "Паспорт";
+            this.Паспорт.Name = "Паспорт";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.Width = 120;
+            // 
+            // Телефон
+            // 
+            this.Телефон.HeaderText = "Телефон";
+            this.Телефон.Name = "Телефон";
+            // 
+            // ID_должности
+            // 
+            this.ID_должности.HeaderText = "ID_должности";
+            this.ID_должности.Name = "ID_должности";
+            // 
+            // ID_статуса
+            // 
+            this.ID_статуса.HeaderText = "ID_статуса";
+            this.ID_статуса.Name = "ID_статуса";
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +231,15 @@
         }
 
         #endregion
+        public System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Фамилия;
         private System.Windows.Forms.DataGridViewTextBoxColumn Имя;
@@ -229,14 +250,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Телефон;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_должности;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_статуса;
-        public System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
-        public System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }

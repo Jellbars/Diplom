@@ -172,5 +172,10 @@ namespace AZS_0._1
                 textBox2.ForeColor = SystemColors.WindowText;
             }
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

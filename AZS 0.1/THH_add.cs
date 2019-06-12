@@ -180,6 +180,11 @@ namespace AZS_0._1
             int stop;  
         }
 
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
 
         /*private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {

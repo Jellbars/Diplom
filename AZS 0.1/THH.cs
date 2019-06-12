@@ -115,5 +115,10 @@ namespace AZS_0._1
             else
                 MessageBox.Show("Выберите и заполните оба поля!");
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

@@ -40,11 +40,11 @@ namespace AZS_0._1
             string a = null;
             if (zp == 0)
             {
-                a = "Select * from [Сотрудники]";
+                a = "SELECT [Сотрудники].[ID_сотрудника], [Фамилия] ,[Имя] , [Отчество], [Адрес], [Паспорт], [Email], [Телефон],Должность.Название, Статус.Название FROM [Сотрудники] join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса";
             }
             if (zp == 1)
             {
-                a = "Select * from [Сотрудники] Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
+                a = "SELECT [Сотрудники].[ID_сотрудника], [Фамилия] ,[Имя] , [Отчество], [Адрес], [Паспорт], [Email], [Телефон],Должность.Название, Статус.Название FROM [Сотрудники] join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
             }
             //connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             using (connection = new SqlConnection(Znach.connetionString))
@@ -59,7 +59,7 @@ namespace AZS_0._1
                         while (reader.Read()) // построчно считываем данные
                         {
                             data.Add(new string[10]);
-                            for (int i = 0; i < 9; i++)
+                            for (int i = 0; i < 10; i++)
                             {
                                 data[data.Count - 1][i] = reader[i].ToString();
                             }
@@ -126,6 +126,11 @@ namespace AZS_0._1
         private void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Load_data(0);
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

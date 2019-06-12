@@ -39,6 +39,7 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.diplom_ruDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diplomruDataSetBindingSource)).BeginInit();
@@ -54,7 +55,8 @@
             // 
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem});
+            this.добавитьToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(554, 24);
@@ -115,6 +117,14 @@
             this.PastName.HeaderText = "Код карты";
             this.PastName.Name = "PastName";
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // Client_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,7 +135,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            //this.Name = "Client_add";
+            this.Name = "Client_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Client_add";
             this.Load += new System.EventHandler(this.Client_add_Load);
@@ -151,5 +161,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn PastName;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }

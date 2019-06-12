@@ -45,6 +45,7 @@
             this.Цена = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Сумма = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +61,12 @@
             this.toolStripTextBox1,
             this.toolStripComboBox1,
             this.toolStripTextBox2,
-            this.поискToolStripMenuItem});
+            this.поискToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(855, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(931, 27);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -141,23 +143,26 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(926, 219);
             this.dataGridView1.TabIndex = 3;
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.Width = 50;
             // 
             // Поставщик
             // 
             this.Поставщик.HeaderText = "Поставщик";
             this.Поставщик.Name = "Поставщик";
+            this.Поставщик.Width = 140;
             // 
             // Заправка
             // 
             this.Заправка.HeaderText = "Заправка";
             this.Заправка.Name = "Заправка";
+            this.Заправка.Width = 170;
             // 
             // Топливо
             // 
@@ -184,12 +189,20 @@
             this.Дата.HeaderText = "Дата";
             this.Дата.Name = "Дата";
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // THH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(855, 261);
+            this.ClientSize = new System.Drawing.Size(931, 261);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -215,6 +228,7 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripMenuItem поискToolStripMenuItem;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Поставщик;
         private System.Windows.Forms.DataGridViewTextBoxColumn Заправка;

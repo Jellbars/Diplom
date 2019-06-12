@@ -117,5 +117,28 @@ namespace AZS_0._1
                     azs.Parametr();
                 }
         }
+
+        private void входToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Введите логин");
+                goto Vh;
+            }
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Введите пароль");
+                goto Vh;
+            }
+            SqL("SELECT * FROM [Авторизация] Where [Авторизация].[Login] = '" + textBox1.Text + "' and [Авторизация].[Password] = '" + textBox2.Text + "'");
+
+        Vh:
+            int j = 1;
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

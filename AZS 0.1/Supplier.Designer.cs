@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Телефон = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +37,12 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Телефон = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,33 +61,8 @@
             this.Email});
             this.dataGridView1.Location = new System.Drawing.Point(0, 30);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(551, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(656, 207);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Название";
-            this.Name.Name = "Name";
-            // 
-            // Addr
-            // 
-            this.Addr.HeaderText = "Адрес";
-            this.Addr.Name = "Addr";
-            // 
-            // Телефон
-            // 
-            this.Телефон.HeaderText = "Телефон";
-            this.Телефон.Name = "Телефон";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
             // 
             // menuStrip1
             // 
@@ -98,10 +74,11 @@
             this.toolStripTextBox1,
             this.toolStripComboBox1,
             this.toolStripTextBox2,
-            this.поискToolStripMenuItem});
+            this.поискToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(629, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(688, 27);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -159,16 +136,54 @@
             this.поискToolStripMenuItem.Text = "Поиск";
             this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Название";
+            this.Name.Name = "Name";
+            this.Name.Width = 150;
+            // 
+            // Addr
+            // 
+            this.Addr.HeaderText = "Адрес";
+            this.Addr.Name = "Addr";
+            this.Addr.Width = 120;
+            // 
+            // Телефон
+            // 
+            this.Телефон.HeaderText = "Телефон";
+            this.Телефон.Name = "Телефон";
+            this.Телефон.Width = 120;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.Width = 150;
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(629, 242);
+            this.ClientSize = new System.Drawing.Size(688, 242);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = "Supplier";
+            this.Name = "Supplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Supplier";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -195,5 +210,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Addr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Телефон;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }

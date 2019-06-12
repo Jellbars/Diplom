@@ -68,5 +68,10 @@ namespace AZS_0._1
             //this.клиентTableAdapter.Fill(this.diplom_ruDataSet.Клиент);
 
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

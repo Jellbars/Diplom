@@ -208,5 +208,23 @@ namespace AZS_0._1
             supl.редактироватьToolStripMenuItem.Visible = false;
             open.open_form(supl, this);
         }
+
+        private void посмотрToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+            auth.dataGridView1.ReadOnly = true;
+            auth.редактироватьToolStripMenuItem.Visible = false;
+            open.open_form(auth, this);
+        }
+
+        private void добавлениеToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void редактированиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

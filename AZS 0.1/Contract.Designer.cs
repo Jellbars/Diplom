@@ -46,6 +46,7 @@
             this.Датапоставки = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Сумма = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Датазакл = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -61,11 +62,12 @@
             this.toolStripTextBox1,
             this.toolStripComboBox1,
             this.toolStripTextBox2,
-            this.поискToolStripMenuItem});
+            this.поискToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(951, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(980, 27);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -144,7 +146,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(947, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(971, 309);
             this.dataGridView1.TabIndex = 5;
             // 
             // ID
@@ -192,12 +194,20 @@
             this.Датазакл.HeaderText = "Дата заключения";
             this.Датазакл.Name = "Датазакл";
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // Contract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(951, 351);
+            this.ClientSize = new System.Drawing.Size(980, 351);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -232,5 +242,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Датапоставки;
         private System.Windows.Forms.DataGridViewTextBoxColumn Сумма;
         private System.Windows.Forms.DataGridViewTextBoxColumn Датазакл;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }

@@ -43,6 +43,7 @@
             this.diplom_ruDataSet = new AZS_0._1.Diplom_ruDataSet();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomruDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplom_ruDataSet)).BeginInit();
@@ -138,12 +139,21 @@
             // 
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem});
+            this.добавитьToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(958, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // Personal_add
             // 
@@ -155,7 +165,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            //this.Name = "Personal_add";
+            this.Name = "Personal_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Personal";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -184,5 +194,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewComboBoxColumn Dolnost;
         private System.Windows.Forms.DataGridViewComboBoxColumn Status;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }

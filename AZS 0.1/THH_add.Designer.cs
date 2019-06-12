@@ -41,6 +41,7 @@
             this.Цена = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Сумма = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Дата = new System.Windows.Forms.DataGridViewCalendarColumn();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diplom_ruDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomruDataSetBindingSource)).BeginInit();
@@ -51,7 +52,8 @@
             // 
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem});
+            this.добавитьToolStripMenuItem,
+            this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(744, 24);
@@ -140,6 +142,14 @@
             this.Дата.HeaderText = "Дата";
             this.Дата.Name = "Дата";
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // THH_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,5 +186,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Цена;
         private System.Windows.Forms.DataGridViewTextBoxColumn Сумма;
         private System.Windows.Forms.DataGridViewCalendarColumn Дата;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
     }
 }

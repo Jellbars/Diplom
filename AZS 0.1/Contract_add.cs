@@ -178,5 +178,9 @@ namespace AZS_0._1
                 }
         }
 
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }
