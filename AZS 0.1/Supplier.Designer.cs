@@ -183,7 +183,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Supplier";
+            //this.Name = "Supplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Supplier";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

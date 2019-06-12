@@ -135,7 +135,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Client_add";
+            //this.Name = "Client_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Client_add";
             this.Load += new System.EventHandler(this.Client_add_Load);

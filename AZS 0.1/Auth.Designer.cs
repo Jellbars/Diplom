@@ -85,6 +85,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -137,33 +138,39 @@
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
             // ФИО
             // 
             this.ФИО.HeaderText = "ФИО сотрудника";
             this.ФИО.Name = "ФИО";
+            this.ФИО.ReadOnly = true;
             this.ФИО.Width = 170;
             // 
             // Логин
             // 
             this.Логин.HeaderText = "Логин";
             this.Логин.Name = "Логин";
+            this.Логин.ReadOnly = true;
             // 
             // Пароль
             // 
             this.Пароль.HeaderText = "Пароль";
             this.Пароль.Name = "Пароль";
+            this.Пароль.ReadOnly = true;
             // 
             // Должность
             // 
             this.Должность.HeaderText = "Должность";
             this.Должность.Name = "Должность";
+            this.Должность.ReadOnly = true;
             // 
             // Статус
             // 
             this.Статус.HeaderText = "Статус";
             this.Статус.Name = "Статус";
+            this.Статус.ReadOnly = true;
             // 
             // Auth
             // 

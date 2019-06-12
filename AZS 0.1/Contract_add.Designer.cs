@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Сотрудник = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Поставщик = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -47,7 +48,6 @@
             this.dataGridViewCalendarColumn1 = new System.Windows.Forms.DataGridViewCalendarColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCalendarColumn2 = new System.Windows.Forms.DataGridViewCalendarColumn();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomruDataSetBindingSource)).BeginInit();
@@ -74,6 +74,14 @@
             this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.обновитьToolStripMenuItem.Text = "Добавить";
             this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -189,14 +197,6 @@
             this.dataGridViewCalendarColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewCalendarColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
-            // 
             // Contract_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +209,7 @@
             this.Name = "Contract_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Contract_add";
+            this.Load += new System.EventHandler(this.Contract_add_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(42, 32);
+            this.label1.Location = new System.Drawing.Point(43, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(22, 85);
+            this.label2.Location = new System.Drawing.Point(23, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 0;
@@ -60,20 +60,21 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 85);
+            this.textBox2.Location = new System.Drawing.Point(112, 110);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(141, 20);
             this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(111, 33);
+            this.textBox1.Location = new System.Drawing.Point(112, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(141, 20);
             this.textBox1.TabIndex = 2;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.входToolStripMenuItem,
             this.выходToolStripMenuItem});

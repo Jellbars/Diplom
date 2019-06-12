@@ -183,6 +183,7 @@ namespace AZS_0._1
         private void созданиеЧекаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Check check = new Check();
+            check.MdiParent = this;
             open.open_form(check, this);
         }
 
@@ -219,7 +220,9 @@ namespace AZS_0._1
 
         private void добавлениеToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            Auth_add authad = new Auth_add();
+            authad.dataGridView1.ReadOnly = true;
+            open.open_form(authad, this);
         }
 
         private void редактированиеToolStripMenuItem_Click(object sender, EventArgs e)

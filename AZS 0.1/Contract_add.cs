@@ -51,7 +51,7 @@ namespace AZS_0._1
             }
             if (zp == 4)
             {
-                a = "Select Фамилия, Имя, Отчество from [Сотрудники]";
+                a = "Select Фамилия, Имя, Отчество from [Сотрудники] Where ID_должности = 2";
             }
             if (zp == 5)
             {
@@ -181,6 +181,11 @@ namespace AZS_0._1
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void Contract_add_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
