@@ -23,7 +23,6 @@ namespace AZS_0._1
 
         public void Load_data(int zp)
         {
-            //dataGridView1.ReadOnly = false;
             dataGridView1.AllowUserToAddRows = true;
             List<string[]> data = new List<string[]>();
             string a = null;
@@ -31,11 +30,6 @@ namespace AZS_0._1
             if (zp == 0)
             {
                 a = "Select Авторизация.ID_login, Сотрудники.Фамилия, Сотрудники.Имя, Сотрудники.Отчество, Авторизация.Login, Авторизация.Password, Должность.Название, Статус.Название from [Сотрудники] join Авторизация on Сотрудники.ID_сотрудника = Авторизация.ID_сотрудника join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса";
-            }
-            if (zp == 1)
-            {
-                //a = "Select Авторизация.ID_login , Сотрудники.Фамилия, Сотрудники.Имя, Сотрудники.Отчество, Аторизация.Login, Авторизация.Password, Должность.Название, Статус.Название from[Авторизация] join Сотрудники on Авторизация.ID_сотрудника = Сотрудники.ID_сотрудника join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
-                //a = "Select * from [] Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
             }
             using (connection = new SqlConnection(Znach.connetionString))
                 try
@@ -97,7 +91,6 @@ namespace AZS_0._1
                     connection.Dispose();
                     foreach (string[] s in data)
                         dataGridView1.Rows.Add(s);
-                    //dataGridView1.ReadOnly = true;
                     dataGridView1.AllowUserToAddRows = false;
                 }
         }

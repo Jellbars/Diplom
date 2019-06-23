@@ -43,7 +43,6 @@ namespace AZS_0._1
         {
             chek_cl = 0;
             List<string[]> data = new List<string[]>();
-            //string connetionString = null;
             string a = null;
             if (zp == 0)
             {
@@ -65,7 +64,6 @@ namespace AZS_0._1
             {
                 a = "Select ID_топлива, Цена  from [Топливо] Where Название ='" + comboBox1.Text + "'";
             }
-            //connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {
@@ -79,7 +77,6 @@ namespace AZS_0._1
                             if (zp == 0)
                             {
                                 comboBox1.Items.Add(reader[0]);
-                                //comboBox1.Items.Insert(Convert.ToInt32((reader[0].ToString())), reader[1].ToString());
                             }
                             if (zp == 1)
                             {
@@ -113,7 +110,6 @@ namespace AZS_0._1
                         if (zp == 1)
                         {
                             textBox2.ForeColor = Color.Red;
-                            //MessageBox.Show("Не найдено");
                         }
                         if (zp == 2)
                         {

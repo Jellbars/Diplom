@@ -116,6 +116,7 @@ namespace AZS_0._1
 
         private void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Znach.prof = 0;
             for (int i = 0; i < 8; i++)
             {
                 if (i > 2 & i < 5)
@@ -167,10 +168,10 @@ namespace AZS_0._1
                     SqlParameter Sotr = new SqlParameter("@Sotr", id_sotr);
                     SqlParameter Post = new SqlParameter("@Post", id_post);
                     SqlParameter Topl = new SqlParameter("@Topl", id_topl);
-                    SqlParameter Kolvo = new SqlParameter("@Kolvo", dataGridView1[3, str].Value.ToString());
-                    SqlParameter Zen = new SqlParameter("@Zen", dataGridView1[4, str].Value.ToString());
+                    SqlParameter Kolvo = new SqlParameter("@Kolvo", Convert.ToInt32(dataGridView1[3, str].Value.ToString()));
+                    SqlParameter Zen = new SqlParameter("@Zen", Convert.ToDouble(dataGridView1[4, str].Value.ToString()));
                     SqlParameter Datep = new SqlParameter("@Datep", dataGridView1[5, str].EditedFormattedValue.ToString());
-                    SqlParameter Datez = new SqlParameter("@Datep", dataGridView1[7, str].EditedFormattedValue.ToString());
+                    SqlParameter Datez = new SqlParameter("@Datez", dataGridView1[7, str].EditedFormattedValue.ToString());
                     command.Parameters.Add(Sotr);
                     command.Parameters.Add(Post);
                     command.Parameters.Add(Topl);

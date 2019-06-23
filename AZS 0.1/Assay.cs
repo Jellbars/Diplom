@@ -36,7 +36,7 @@ namespace AZS_0._1
                     break;
 
                 case "5":
-                    Simvols(@"(^[1-9]{1})([0-9]{0,})(,{0,}[0-9]{0,}$)", b);//nechel
+                    Simvols(@"(^[1-9]{1})([0-9]{0,})(,{0,1}[0-9]{0,}$)", b);//nechel
                     break;
 
                 case "6":
@@ -53,7 +53,7 @@ namespace AZS_0._1
                     Simvols(@"^[0-9]{1}[,0-9]{0,}$", b);
                     break;
                 case "10":
-                    Simvols(@"^[0-9a-zA-Z]{4,}$", b);
+                    Simvols(@"^[0-9a-zA-Z]{5,}$", b);
                     break;
                 default:
                     break;

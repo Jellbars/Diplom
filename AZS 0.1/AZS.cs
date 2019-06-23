@@ -288,7 +288,6 @@ namespace AZS_0._1
             fuel.label1.Visible = true;
             fuel.textBox1.Visible = true;
             fuel.dataGridView1.ReadOnly = true;
-            //fuel.dataGridView1.ReadOnly = false;
             fuel.удалитьToolStripMenuItem.Visible = false;
             fuel.редактироватьToolStripMenuItem.Visible = true;
             open.open_form(fuel, this);
@@ -312,7 +311,6 @@ namespace AZS_0._1
 
         private void AZS_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //Properties.Settings.Default.TextBox2 = textBox1.Text;
             Properties.Settings.Default.TextBox2 = toolStripStatusLabel2.Text;
             Properties.Settings.Default.Save();
         }

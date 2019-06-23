@@ -43,13 +43,11 @@ namespace AZS_0._1
         {
             dataGridView1.AllowUserToAddRows = true;
             List<string[]> data = new List<string[]>();
-            //string connetionString = null;
             string a = null;
             if (zp == 0)
             {
                 a = "SELECT * FROM [Заправка]";
             }
-            //connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {

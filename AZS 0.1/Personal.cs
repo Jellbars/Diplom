@@ -26,17 +26,12 @@ namespace AZS_0._1
         private void Personal_del_Load(object sender, EventArgs e)
         {
         /*// TODO: данная строка кода позволяет загрузить данные в таблицу "diplom_ruDataSet.Сотрудники". При необходимости она может быть перемещена или удалена.
-        this.сотрудникиTableAdapter.Fill(this.diplom_ruDataSet.Сотрудники);
-        // TODO: данная строка кода позволяет загрузить данные в таблицу "diplom_ruDataSet.Сотрудники". При необходимости она может быть перемещена или удалена.
-        this.сотрудникиTableAdapter.Fill(this.diplom_ruDataSet.Сотрудники);
-        // TODO: данная строка кода позволяет загрузить данные в таблицу "diplom_ruDataSet.Сотрудники". При необходимости она может быть перемещена или удалена.
         this.сотрудникиTableAdapter.Fill(this.diplom_ruDataSet.Сотрудники);*/
         }
 
         public void Load_data(int zp)
         {
             List<string[]> data = new List<string[]>();
-            //string connetionString = null;
             string a = null;
             if (zp == 0)
             {
@@ -46,7 +41,6 @@ namespace AZS_0._1
             {
                 a = "SELECT [Сотрудники].[ID_сотрудника], [Фамилия] ,[Имя] , [Отчество], [Адрес], [Паспорт], [Email], [Телефон],Должность.Название, Статус.Название FROM [Сотрудники] join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
             }
-            //connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {
@@ -97,9 +91,7 @@ namespace AZS_0._1
 
         private void Delete_data(int str)
         {
-            //string connetionString = null;
             string a = "Delete from [Сотрудники] Where ID_сотрудника = '" + dataGridView1[0, str].Value + "'";
-            //connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {

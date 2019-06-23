@@ -99,7 +99,6 @@ namespace AZS_0._1
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //string del = dataGridView1[8, 0].EditedFormattedValue.ToString();
             for (int i = 0; i < 9; i++)
             {
                 if (i < 7)
@@ -144,10 +143,8 @@ namespace AZS_0._1
 
         public void reg(int str)
         {
-            string connetionString = null;
-            connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             string a = "INSERT INTO [Сотрудники] ([Фамилия],[Имя],[Отчество],[Адрес],[Паспорт],[Email],[Телефон], [ID_должности], [ID_статуса]) VALUES (@LastName, @Name, @PastName, @Adress, @Pasport, @Email, @Teleph, @Dol, @Stat)";
-            using (SqlConnection connection = new SqlConnection(connetionString))
+            using (SqlConnection connection = new SqlConnection(Znach.connetionString))
                 try
                 {
                     connection.Open();

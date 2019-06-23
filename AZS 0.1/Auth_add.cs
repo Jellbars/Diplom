@@ -23,6 +23,7 @@ namespace AZS_0._1
         SqlDataReader reader;
         List<string[]> data;
         Assay assay = new Assay();
+        int esliest;
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -37,7 +38,6 @@ namespace AZS_0._1
 
         public void Load_data(int zp)
         {
-            //dataGridView1.ReadOnly = false;
             dataGridView1.AllowUserToAddRows = true;
             data = new List<string[]>();
             string a = null;
@@ -45,11 +45,6 @@ namespace AZS_0._1
             if (zp == 0)
             {
                 a = "SELECT ID_сотрудника, Имя, Фамилия, Отчество, Статус.Название, Должность.Название  FROM Сотрудники join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса WHERE Сотрудники.ID_сотрудника NOT IN(( SELECT Авторизация.ID_сотрудника FROM Авторизация)) and Сотрудники.ID_статуса <> 5";
-            }
-            if (zp == 1)
-            {
-                //a = "Select Авторизация.ID_login , Сотрудники.Фамилия, Сотрудники.Имя, Сотрудники.Отчество, Аторизация.Login, Авторизация.Password, Должность.Название, Статус.Название from[Авторизация] join Сотрудники on Авторизация.ID_сотрудника = Сотрудники.ID_сотрудника join Должность on Сотрудники.ID_должности = Должность.ID_должности join Статус on Сотрудники.ID_статуса = Статус.ID_статуса Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
-                //a = "Select  from [] Where " + dataGridView1[0, 0].Value.ToString() + "'";
             }
             using (connection = new SqlConnection(Znach.connetionString))
                 try
@@ -62,6 +57,7 @@ namespace AZS_0._1
                         dataGridView1.Rows.Clear();
                         while (reader.Read()) // построчно считываем данные
                         {
+                            esliest = 1;
                             data.Add(new string[100]);
                             string FIO = null;
                             for (int i = 0; i < 6; i++)
@@ -96,7 +92,8 @@ namespace AZS_0._1
                     {
                         if (zp == 0)
                         {
-                            MessageBox.Show("Ошибка...");
+                            MessageBox.Show("Регистрация невозможна,\r\nтак как нет сотрудников без пароля","Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            esliest = 0;
                         }
                         if (zp == 1)
                         {
@@ -111,7 +108,6 @@ namespace AZS_0._1
                     connection.Dispose();
                     foreach (string[] s in data)
                         dataGridView1.Rows.Add(s);
-                    //dataGridView1.ReadOnly = true;
                     dataGridView1.AllowUserToAddRows = false;
                 }
         }
@@ -129,28 +125,35 @@ namespace AZS_0._1
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Znach.prof = 0;
-            if (dataGridView1.SelectedCells.Count.ToString() != "null")
+            if (esliest == 1)
             {
-                if (dataGridView2[0, 0].Value.ToString().Length > 5 & dataGridView2[1, 0].Value.ToString().Length > 5)
+                if (dataGridView1.SelectedCells.Count.ToString() != "null")
                 {
-                    assay.Prov(10, dataGridView2[0, 0].Value.ToString());
-                    assay.Prov(10, dataGridView2[1, 0].Value.ToString());
-                    if (Znach.prof == 2)
+                    if (dataGridView2[0, 0].Value != null & dataGridView2[1, 0].Value != null)
                     {
-                        string a = dataGridView1[0, Convert.ToInt32(dataGridView1.SelectedCells.Count.ToString()) - 1].Value.ToString();
-                        add(0, a);
-                        Hide();
-                        Show();
+                        assay.Prov(10, dataGridView2[0, 0].Value.ToString());
+                        assay.Prov(10, dataGridView2[1, 0].Value.ToString());
+                        if (Znach.prof == 2)
+                        {
+                            string a = dataGridView1[0, Convert.ToInt32(dataGridView1.SelectedCells.Count.ToString()) - 1].Value.ToString();
+                            add(0, a);
+                            Hide();
+                            Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Логин и пароль может состоять только из латинских букв и цифр");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Логин и пароль может состоять только из латинских букв и цифр");
+                        MessageBox.Show("Не оба поля заполенны, наименьшая длина 5 символов");
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Не оба поля заполенны, наименьшая длина 5 символов");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Регистрация невозможна,\r\nтак как нет сотрудников без пароля", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

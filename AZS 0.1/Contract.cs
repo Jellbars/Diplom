@@ -16,8 +16,6 @@ namespace AZS_0._1
         public Contract()
         {
             InitializeComponent();
-
-            //Load_data(0);
         }
 
         SqlConnection connection;
@@ -31,7 +29,6 @@ namespace AZS_0._1
         public void Load_data(int zp)
         {
             List<string[]> data = new List<string[]>();
-            string connetionString = null;
             string a = null;
             if (zp == 0)
             {
@@ -90,10 +87,8 @@ namespace AZS_0._1
 
         private void Delete_data(int str)
         {
-            string connetionString = null;
             string a = "Delete from [Договор] Where ID_договора = '" + dataGridView1[0, str].Value + "'";
-            connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
-            using (connection = new SqlConnection(connetionString))
+            using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {
                     connection.Open();

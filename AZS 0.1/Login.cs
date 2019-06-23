@@ -100,8 +100,6 @@ namespace AZS_0._1
                         {
                             Znach.log_d = reader[0].ToString();
                             Znach.name = reader[1].ToString();
-                            //object ID_log = reader.GetValue(3);
-                            //Console.WriteLine("{0}", Znach.log);
                         }
                     }
                 }
