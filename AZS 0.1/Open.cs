@@ -30,7 +30,9 @@ namespace AZS_0._1
             Check check = new Check();
             check.MdiParent = azs;
             check.Width = azs.Width - 20;
+            cash = check;
             check.Show();
+            
         }
     }
 }

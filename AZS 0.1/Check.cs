@@ -179,7 +179,7 @@ namespace AZS_0._1
                     }
                 }
                 Load_data(3);
-                //add(0);
+                add(0);
                 Hide();
                 open.open_check();
             }
