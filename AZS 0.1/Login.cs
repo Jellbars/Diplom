@@ -51,9 +51,7 @@ namespace AZS_0._1
         public void SqL(string a)
         {
             chek = 0;
-            string connetionString = null;
-            connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
-            using (connection = new SqlConnection(connetionString))
+            using (connection = new SqlConnection(Znach.connetionString))
             try
             {
                 connection.Open();
@@ -64,7 +62,7 @@ namespace AZS_0._1
                 {
                         while (reader.Read()) // построчно считываем данные
                         {
-                            Znach.log = reader[0].ToString();
+                            Znach.log = reader[3].ToString();
                             chek = 1;
                         }
                         Hide();
@@ -89,9 +87,7 @@ namespace AZS_0._1
 
         public void SqL_d(string a)
         {
-            string connetionString = null;
-            connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
-            using (connection = new SqlConnection(connetionString))
+            using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {
                     connection.Open();

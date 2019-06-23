@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,29 +19,42 @@ namespace AZS_0._1
             InitializeComponent();
         }
 
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataReader reader;
+        Assay assay = new Assay();
+        string kk;
+
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            add(0);
-            Hide();
-            Show();
+            Prov();
+            if (Znach.prof == 4)
+            {
+                Load_data();
+                add(0);
+                Hide();
+                Show();
+            }
+            else
+            {
+                MessageBox.Show("Неправильный ввод");
+            }
 
         }
 
         private void add(int str)
         {
-            string connetionString = null;
-            connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             string a = "INSERT INTO [Клиент] ([Имя],[Фамилия],[Email],[Телефон],[Код_карты]) VALUES ( @Name, @LastName, @Email, @Teleph, @Code)";
-            using (SqlConnection connection = new SqlConnection(connetionString))
+            using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand(a, connection);
+                    command = new SqlCommand(a, connection);
                     SqlParameter LastNPar = new SqlParameter("@LastName", dataGridView1[1, str].Value.ToString());
                     SqlParameter NamPar = new SqlParameter("@Name", dataGridView1[0, str].Value.ToString());
                     SqlParameter EmaPar = new SqlParameter("@Email", dataGridView1[2, str].Value.ToString());
                     SqlParameter TelPar = new SqlParameter("@Teleph", dataGridView1[3, str].Value.ToString());
-                    SqlParameter CodePar = new SqlParameter("@Code", dataGridView1[4, str].Value.ToString());
+                    SqlParameter CodePar = new SqlParameter("@Code", Convert.ToInt32(kk) + 1);
                     command.Parameters.Add(NamPar);
                     command.Parameters.Add(LastNPar);
                     command.Parameters.Add(EmaPar);
@@ -66,6 +80,55 @@ namespace AZS_0._1
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        public void Prov()
+        {
+            Znach.prof = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                if (dataGridView1[i, 0].Value == null)
+                {
+                    goto Vh_p;
+                }
+            }
+            assay.Prov(1, dataGridView1[0, 0].Value.ToString());
+            assay.Prov(1, dataGridView1[1, 0].Value.ToString());
+            assay.Prov(2, dataGridView1[2, 0].Value.ToString());
+            assay.Prov(3, dataGridView1[3, 0].Value.ToString());
+        Vh_p:
+            int har;
+        }
+
+
+        public void Load_data()
+        {
+            string a = null;
+                a = "select max(Код_карты) from Клиент";
+            using (connection = new SqlConnection(Znach.connetionString))
+                try
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(a, connection);
+                    reader = command.ExecuteReader();
+                    if (reader.HasRows) // если есть данные
+                    {
+                        while (reader.Read()) // построчно считываем данные
+                        {
+                            kk = reader[0].ToString();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ошибка...");
+                    }
+                }
+                finally
+                {
+                    reader.Close();
+                    connection.Close();
+                    connection.Dispose();
+                }
         }
     }
 }

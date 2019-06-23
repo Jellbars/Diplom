@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Телефон = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,11 +42,6 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Телефон = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -63,6 +63,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(656, 207);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Название";
+            this.Name.Name = "Name";
+            this.Name.Width = 150;
+            // 
+            // Addr
+            // 
+            this.Addr.HeaderText = "Адрес";
+            this.Addr.Name = "Addr";
+            this.Addr.Width = 120;
+            // 
+            // Телефон
+            // 
+            this.Телефон.HeaderText = "Телефон";
+            this.Телефон.Name = "Телефон";
+            this.Телефон.Width = 120;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.Width = 150;
             // 
             // menuStrip1
             // 
@@ -136,36 +166,6 @@
             this.поискToolStripMenuItem.Text = "Поиск";
             this.поискToolStripMenuItem.Click += new System.EventHandler(this.поискToolStripMenuItem_Click);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Название";
-            this.Name.Name = "Name";
-            this.Name.Width = 150;
-            // 
-            // Addr
-            // 
-            this.Addr.HeaderText = "Адрес";
-            this.Addr.Name = "Addr";
-            this.Addr.Width = 120;
-            // 
-            // Телефон
-            // 
-            this.Телефон.HeaderText = "Телефон";
-            this.Телефон.Name = "Телефон";
-            this.Телефон.Width = 120;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.Width = 150;
-            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -183,6 +183,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(688, 242);
             //this.Name = "Supplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Supplier";

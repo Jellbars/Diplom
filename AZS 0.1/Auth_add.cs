@@ -22,6 +22,7 @@ namespace AZS_0._1
         SqlConnection connection;
         SqlDataReader reader;
         List<string[]> data;
+        Assay assay = new Assay();
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -127,14 +128,24 @@ namespace AZS_0._1
 
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Znach.prof = 0;
             if (dataGridView1.SelectedCells.Count.ToString() != "null")
             {
                 if (dataGridView2[0, 0].Value.ToString().Length > 5 & dataGridView2[1, 0].Value.ToString().Length > 5)
                 {
-                    string a = dataGridView1[0, Convert.ToInt32(dataGridView1.SelectedCells.Count.ToString()) - 1].Value.ToString();
-                    add(0, a);
-                    Hide();
-                    Show();
+                    assay.Prov(10, dataGridView2[0, 0].Value.ToString());
+                    assay.Prov(10, dataGridView2[1, 0].Value.ToString());
+                    if (Znach.prof == 2)
+                    {
+                        string a = dataGridView1[0, Convert.ToInt32(dataGridView1.SelectedCells.Count.ToString()) - 1].Value.ToString();
+                        add(0, a);
+                        Hide();
+                        Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Логин и пароль может состоять только из латинских букв и цифр");
+                    }
                 }
                 else
                 {
@@ -146,8 +157,6 @@ namespace AZS_0._1
 
         private void add(int str, string id)
         {
-            string connetionString = null;
-            //connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
             string a = "INSERT INTO [Авторизация] ([Login],[Password],[ID_сотрудника]) VALUES ( @Login, @Passw, @ID)";
             using (SqlConnection connection = new SqlConnection(Znach.connetionString))
                 try

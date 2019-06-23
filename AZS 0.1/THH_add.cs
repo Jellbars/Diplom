@@ -18,6 +18,7 @@ namespace AZS_0._1
         public int id_post;
         public int id_zapr;
         public int id_topl;
+        Assay assay = new Assay();
 
         public THH_add()
         {
@@ -38,7 +39,7 @@ namespace AZS_0._1
             }
             if (zp == 1)
             {
-                a = "Select ID_запраки from [Заправка] Where Название = '" + dataGridView1[1, 0].EditedFormattedValue.ToString() + "'";
+                a = "Select ID_заправки from [Заправка] Where Адрес = '" + dataGridView1[1, 0].EditedFormattedValue.ToString() + "'";
             }
             if (zp == 2)
             {
@@ -130,9 +131,9 @@ namespace AZS_0._1
                     SqlParameter Post  = new SqlParameter("@Post", id_post);
                     SqlParameter Zapr = new SqlParameter("@Zapr", id_zapr);
                     SqlParameter Topl = new SqlParameter("@Topl", id_topl);
-                    SqlParameter Kolvo = new SqlParameter("@Kolvo", dataGridView1[3, str].Value.ToString());
-                    SqlParameter Zen = new SqlParameter("@Zen", dataGridView1[4, str].Value.ToString());
-                    SqlParameter Date = new SqlParameter("@Date", dataGridView1[6, str].EditedFormattedValue.ToString());
+                    SqlParameter Kolvo = new SqlParameter("@Kolvo", Convert.ToInt32(dataGridView1[3, str].Value));
+                    SqlParameter Zen = new SqlParameter("@Zen", Convert.ToDouble(dataGridView1[4, str].Value));
+                    SqlParameter Date = new SqlParameter("@Date", dataGridView1[5, str].EditedFormattedValue.ToString());
                     command.Parameters.Add(Post);
                     command.Parameters.Add(Zapr);
                     command.Parameters.Add(Topl);
@@ -151,9 +152,10 @@ namespace AZS_0._1
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 7; i++)
+            Znach.prof = 0;
+            for (int i = 0; i < 6; i++)
             {
-                if (i > 2 & i < 6)
+                if (i > 2 & i < 5)
                 {
                     if (dataGridView1[i, 0].Value == null & i != 5)
                     {
@@ -170,12 +172,21 @@ namespace AZS_0._1
                     }
                 }
             }
-            Load_data(0);
-            Load_data(1);
-            Load_data(2);
-            add(0);
-            Hide();
-            Show();
+            assay.Prov(4, dataGridView1[3, 0].Value.ToString());
+            assay.Prov(5, dataGridView1[4, 0].Value.ToString());
+            if (Znach.prof == 2)
+            {
+                Load_data(0);
+                Load_data(1);
+                Load_data(2);
+                add(0);
+                Hide();
+                Show();
+            }
+            else
+            {
+                MessageBox.Show("Проверьте значения: \r\n В поле кол-во только целые числа \r\n В поле цена допускается только запятая в качестве разделителя");
+            }
         Vh:
             int stop;  
         }

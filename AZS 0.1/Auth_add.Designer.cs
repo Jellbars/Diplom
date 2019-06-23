@@ -34,21 +34,21 @@
             this.ходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ФИО = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_должности = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_статуса = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diplom_ruDataSet = new AZS_0._1.Diplom_ruDataSet();
             this.diplomruDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ФИО = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_должности = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_статуса = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplom_ruDataSet)).BeginInit();
@@ -109,6 +109,28 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // ФИО
+            // 
+            this.ФИО.HeaderText = "ФИО";
+            this.ФИО.Name = "ФИО";
+            this.ФИО.Width = 170;
+            // 
+            // ID_должности
+            // 
+            this.ID_должности.HeaderText = "ID_должности";
+            this.ID_должности.Name = "ID_должности";
+            // 
+            // ID_статуса
+            // 
+            this.ID_статуса.HeaderText = "ID_статуса";
+            this.ID_статуса.Name = "ID_статуса";
+            // 
             // diplom_ruDataSet
             // 
             this.diplom_ruDataSet.DataSetName = "Diplom_ruDataSet";
@@ -133,6 +155,16 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView2.Size = new System.Drawing.Size(254, 102);
             this.dataGridView2.TabIndex = 5;
+            // 
+            // Login
+            // 
+            this.Login.HeaderText = "Login";
+            this.Login.Name = "Login";
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -166,38 +198,6 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Статус";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // Login
-            // 
-            this.Login.HeaderText = "Login";
-            this.Login.Name = "Login";
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // ФИО
-            // 
-            this.ФИО.HeaderText = "ФИО";
-            this.ФИО.Name = "ФИО";
-            this.ФИО.Width = 170;
-            // 
-            // ID_должности
-            // 
-            this.ID_должности.HeaderText = "ID_должности";
-            this.ID_должности.Name = "ID_должности";
-            // 
-            // ID_статуса
-            // 
-            this.ID_статуса.HeaderText = "ID_статуса";
-            this.ID_статуса.Name = "ID_статуса";
-            // 
             // Auth_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +208,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(782, 394);
             this.Name = "Auth_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Auth_add";

@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assay.cs" />
     <Compile Include="Auth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,18 @@
     </Compile>
     <Compile Include="Check.Designer.cs">
       <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fuel.Designer.cs">
+      <DependentUpon>Fuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refill.Designer.cs">
+      <DependentUpon>Refill.cs</DependentUpon>
     </Compile>
     <Compile Include="Supplier_add.cs">
       <SubType>Form</SubType>
@@ -167,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fuel.resx">
+      <DependentUpon>Fuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refill.resx">
+      <DependentUpon>Refill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier_add.resx">
       <DependentUpon>Supplier_add.cs</DependentUpon>

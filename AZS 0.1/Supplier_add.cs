@@ -18,8 +18,11 @@ namespace AZS_0._1
             InitializeComponent();
         }
 
+        Assay assay = new Assay();
+
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Znach.prof = 0;
             for (int i = 0; i < 4; i++)
             {
                 if (dataGridView1[i, 0].Value == null)
@@ -28,9 +31,19 @@ namespace AZS_0._1
                     goto Vh;
                 }
             }
-            add(0);
-            Hide();
-            Show();
+            assay.Prov(6, dataGridView1[0, 0].Value.ToString());
+            assay.Prov(3, dataGridView1[2, 0].Value.ToString());
+            assay.Prov(2, dataGridView1[3, 0].Value.ToString());
+            if (Znach.prof == 3)
+            {
+                add(0);
+                Hide();
+                Show();
+            }
+            else
+            {
+                MessageBox.Show("Проверьте поля на корректность");
+            }
         Vh:
             int stop;
 

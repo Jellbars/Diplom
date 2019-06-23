@@ -17,14 +17,16 @@ namespace AZS_0._1
         public AZS()
         {
             InitializeComponent();
+            toolStripStatusLabel2.Text = Properties.Settings.Default.TextBox2;
+            Znach.log_d = "0";
+            Parametr();
         }
 
         private void AZS_Load(object sender, EventArgs e)
         {
-
+            
             Znach.Mdi_Height = Height;
             Znach.Mdi_Width = Width;
-            //Parametr();
         }
 
         private void входToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -171,11 +173,60 @@ namespace AZS_0._1
                     break;
 
                 case "1":
-
+                    учетToolStripMenuItem.Enabled = true;
+                    персоналToolStripMenuItem.Enabled = true;
+                    клиентToolStripMenuItem.Enabled = true;
+                    администрированиеToolStripMenuItem.Enabled = true;
+                    созданиеЧекаToolStripMenuItem.Enabled = true;
                     break;
 
                 case "2":
+                    учетToolStripMenuItem.Enabled = true;
+                    персоналToolStripMenuItem.Enabled = true;
+                    клиентToolStripMenuItem.Enabled = true;
+                    администрированиеToolStripMenuItem.Enabled = false;
+                    созданиеЧекаToolStripMenuItem.Enabled = true;
+                    break;
 
+                case "3":
+                    учетToolStripMenuItem.Enabled = true;
+                    персоналToolStripMenuItem.Enabled = false;
+                    клиентToolStripMenuItem.Enabled = false;
+                    администрированиеToolStripMenuItem.Enabled = false;
+                    созданиеЧекаToolStripMenuItem.Enabled = false;
+                    break;
+
+                case "4":
+                    учетToolStripMenuItem.Enabled = false;
+                    персоналToolStripMenuItem.Enabled = false;
+                    клиентToolStripMenuItem.Enabled = true;
+                    удалениеToolStripMenuItem2.Visible = false;
+                    администрированиеToolStripMenuItem.Enabled = false;
+                    созданиеЧекаToolStripMenuItem.Enabled = true;
+                    break;
+
+                case "5":
+                    учетToolStripMenuItem.Enabled = false;
+                    персоналToolStripMenuItem.Enabled = false;
+                    клиентToolStripMenuItem.Enabled = false;
+                    администрированиеToolStripMenuItem.Enabled = false;
+                    созданиеЧекаToolStripMenuItem.Enabled = true;
+                    break;
+
+                case "6":
+                    учетToolStripMenuItem.Enabled = false;
+                    персоналToolStripMenuItem.Enabled = false;
+                    клиентToolStripMenuItem.Enabled = false;
+                    администрированиеToolStripMenuItem.Enabled = false;
+                    созданиеЧекаToolStripMenuItem.Enabled = false;
+                    break;
+
+                case "7":
+                    учетToolStripMenuItem.Enabled = false;
+                    персоналToolStripMenuItem.Enabled = true;
+                    клиентToolStripMenuItem.Enabled = true;
+                    администрированиеToolStripMenuItem.Enabled = true;
+                    созданиеЧекаToolStripMenuItem.Enabled = false;
                     break;
             }
         }
@@ -228,6 +279,42 @@ namespace AZS_0._1
         private void редактированиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Znach.zagr_fuel = 1;
+            Fuel fuel = new Fuel();
+            fuel.label1.Visible = true;
+            fuel.textBox1.Visible = true;
+            fuel.dataGridView1.ReadOnly = true;
+            //fuel.dataGridView1.ReadOnly = false;
+            fuel.удалитьToolStripMenuItem.Visible = false;
+            fuel.редактироватьToolStripMenuItem.Visible = true;
+            open.open_form(fuel, this);
+        }
+
+        private void просмотрToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Znach.zagr_fuel = 0;
+            Fuel fuel = new Fuel();
+            fuel.dataGridView1.ReadOnly = true;
+            fuel.удалитьToolStripMenuItem.Visible = false;
+            fuel.редактироватьToolStripMenuItem.Visible = false;
+            open.open_form(fuel, this);
+        }
+
+        private void выборЗаправкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Refill refill = new Refill();
+            open.open_form(refill, this);
+        }
+
+        private void AZS_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Properties.Settings.Default.TextBox2 = textBox1.Text;
+            Properties.Settings.Default.TextBox2 = toolStripStatusLabel2.Text;
+            Properties.Settings.Default.Save();
         }
     }
 }

@@ -165,6 +165,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(958, 186);
             //this.Name = "Personal_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Personal";

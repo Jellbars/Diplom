@@ -19,6 +19,7 @@ namespace AZS_0._1
         public int id_st;
         public int id_dol;
         int stop;
+        Assay assay = new Assay();
 
         public Personal_add()
         {
@@ -118,6 +119,9 @@ namespace AZS_0._1
                     }
                 }
             }
+            Prp();
+            if (Znach.prof == 6)
+            {
                 Load_data(0);
                 Load_data(1);
                 reg(0);
@@ -125,6 +129,11 @@ namespace AZS_0._1
                 n = dataGridView1.Rows.Count;
                 Hide();
                 Show();
+            }
+            else
+            {
+                MessageBox.Show("Проверьте на корректность все поля \r\n паспорт заполняется без пробела");
+            }
         Vh:
             stop = 0;
 
@@ -174,6 +183,17 @@ namespace AZS_0._1
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        public void Prp()
+        {
+            Znach.prof = 0;
+            assay.Prov(1, dataGridView1[0, 0].Value.ToString());
+            assay.Prov(1, dataGridView1[1, 0].Value.ToString());
+            assay.Prov(1, dataGridView1[2, 0].Value.ToString());
+            assay.Prov(7, dataGridView1[4, 0].Value.ToString());
+            assay.Prov(3, dataGridView1[5, 0].Value.ToString());
+            assay.Prov(2, dataGridView1[6, 0].Value.ToString());
         }
     }
 

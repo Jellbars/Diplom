@@ -19,9 +19,18 @@ namespace AZS_0._1
             }
             cash = form;
             //form.Height = doch.Height;
-            //form.Width = doch.Width;
+            form.Width = doch.Width - 20;
             form.MdiParent = doch;
             form.Show();
+        }
+
+        public void open_check()
+        {
+            AZS azs = (AZS)Application.OpenForms["AZS"];
+            Check check = new Check();
+            check.MdiParent = azs;
+            check.Width = azs.Width - 20;
+            check.Show();
         }
     }
 }

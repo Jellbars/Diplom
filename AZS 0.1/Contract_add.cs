@@ -20,6 +20,7 @@ namespace AZS_0._1
         public int id_sotr;
         public int id_topl;
         public string[] strsotr = null;
+        Assay assay = new Assay();
 
         public Contract_add()
         {
@@ -134,14 +135,23 @@ namespace AZS_0._1
                     }
                 }
             }
+            assay.Prov(4, dataGridView1[3, 0].Value.ToString());
+            assay.Prov(5, dataGridView1[4, 0].Value.ToString());
             char[] splitchar = { ' ' };
             strsotr = dataGridView1[0, 0].EditedFormattedValue.ToString().Split(splitchar);
             Load_data(0);
             Load_data(1);
             Load_data(2);
-            add(0);
-            Hide();
-            Show();
+            if (Znach.prof == 2)
+            {
+                add(0);
+                Hide();
+                Show();
+            }
+            else
+            {
+                MessageBox.Show("Проверьте значения: \r\n В поле кол-во только целые числа \r\n В поле цена допускается только запятая в качестве разделителя");
+            }
         Vh:
             int stop;
         }

@@ -193,6 +193,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(768, 370);
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Client";

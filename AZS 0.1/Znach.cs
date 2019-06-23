@@ -16,5 +16,7 @@ namespace AZS_0._1
         public static string load;
         public static string connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
         public static int id_zapr;
+        public static int zagr_fuel;
+        public static int prof;
     }
 }

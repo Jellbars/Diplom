@@ -33,5 +33,17 @@ namespace AZS_0._1.Properties {
                 return ((string)(this["Diplom_ruConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TextBox2 {
+            get {
+                return ((string)(this["TextBox2"]));
+            }
+            set {
+                this["TextBox2"] = value;
+            }
+        }
     }
 }

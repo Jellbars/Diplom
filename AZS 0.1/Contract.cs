@@ -41,8 +41,7 @@ namespace AZS_0._1
             {
                 a = "Select * from [Договор] Where [" + toolStripComboBox1.Text + "] = '" + toolStripTextBox2.Text + "'";
             }
-            connetionString = @"Data Source=DESKTOP-RELTBSM\SQLEXPRESS;Initial Catalog=Diplom_ru;Integrated Security=True";
-            using (connection = new SqlConnection(connetionString))
+            using (connection = new SqlConnection(Znach.connetionString))
                 try
                 {
                     connection.Open();

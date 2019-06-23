@@ -31,17 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diplom_ruDataSet = new AZS_0._1.Diplom_ruDataSet();
             this.diplomruDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Поставщик_тнн = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Заправка_тнн = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Топливо_тнн = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCalendarColumn1 = new System.Windows.Forms.DataGridViewCalendarColumn();
             this.Кол_во = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Цена = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Сумма = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Дата = new System.Windows.Forms.DataGridViewCalendarColumn();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diplom_ruDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomruDataSetBindingSource)).BeginInit();
@@ -67,6 +70,14 @@
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
             // diplom_ruDataSet
             // 
             this.diplom_ruDataSet.DataSetName = "Diplom_ruDataSet";
@@ -88,7 +99,6 @@
             this.Топливо_тнн,
             this.Кол_во,
             this.Цена,
-            this.Сумма,
             this.Дата});
             this.dataGridView1.DataSource = this.diplomruDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 27);
@@ -120,6 +130,21 @@
             this.Топливо_тнн.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Топливо_тнн.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Кол-во топлива";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Цена за ед.";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewCalendarColumn1
+            // 
+            this.dataGridViewCalendarColumn1.HeaderText = "Дата";
+            this.dataGridViewCalendarColumn1.Name = "dataGridViewCalendarColumn1";
+            // 
             // Кол_во
             // 
             this.Кол_во.HeaderText = "Кол-во топлива";
@@ -130,25 +155,17 @@
             this.Цена.HeaderText = "Цена за ед.";
             this.Цена.Name = "Цена";
             // 
-            // Сумма
-            // 
-            this.Сумма.HeaderText = "Сумма";
-            this.Сумма.Name = "Сумма";
-            this.Сумма.ReadOnly = true;
-            this.Сумма.Visible = false;
-            // 
             // Дата
             // 
             this.Дата.HeaderText = "Дата";
             this.Дата.Name = "Дата";
             // 
-            // выходToolStripMenuItem
+            // dataGridViewTextBoxColumn3
             // 
-            this.выходToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.dataGridViewTextBoxColumn3.HeaderText = "Сумма";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
             // 
             // THH_add
             // 
@@ -159,6 +176,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(744, 175);
             this.Name = "THH_add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "THH_add";
@@ -179,13 +197,16 @@
         private Diplom_ruDataSet diplom_ruDataSet;
         private System.Windows.Forms.BindingSource diplomruDataSetBindingSource;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.DataGridViewComboBoxColumn Поставщик_тнн;
         private System.Windows.Forms.DataGridViewComboBoxColumn Заправка_тнн;
         private System.Windows.Forms.DataGridViewComboBoxColumn Топливо_тнн;
         private System.Windows.Forms.DataGridViewTextBoxColumn Кол_во;
         private System.Windows.Forms.DataGridViewTextBoxColumn Цена;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Сумма;
         private System.Windows.Forms.DataGridViewCalendarColumn Дата;
-        private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewCalendarColumn dataGridViewCalendarColumn1;
     }
 }
