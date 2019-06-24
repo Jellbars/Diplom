@@ -32,7 +32,8 @@ namespace AZS_0._1
             }
             if (zp == 1)
             {
-                a = "Select * from [Поставщик] Where " + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
+                a = "Select * from [Поставщик] Where " 
+                    + toolStripComboBox1.Text + " = '" + toolStripTextBox2.Text + "'";
             }
             using (connection = new SqlConnection(Znach.connetionString))
                 try

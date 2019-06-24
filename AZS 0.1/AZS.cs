@@ -31,6 +31,8 @@ namespace AZS_0._1
 
         private void входToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Znach.log_d = "0";
+            Parametr();
             Login login = new Login();
             login.MdiParent = this;
             open.open_form(login, this);

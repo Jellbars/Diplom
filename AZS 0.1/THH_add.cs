@@ -35,15 +35,18 @@ namespace AZS_0._1
             string a = null;
             if (zp == 0)
             {
-                a = "Select ID_поставщика from [Поставщик] Where Название = '" + dataGridView1[0, 0].EditedFormattedValue.ToString() + "'";
+                a = "Select ID_поставщика from [Поставщик] Where Название = '" 
+                    + dataGridView1[0, 0].EditedFormattedValue.ToString() + "'";
             }
             if (zp == 1)
             {
-                a = "Select ID_заправки from [Заправка] Where Адрес = '" + dataGridView1[1, 0].EditedFormattedValue.ToString() + "'";
+                a = "Select ID_заправки from [Заправка] Where Адрес = '" 
+                    + dataGridView1[1, 0].EditedFormattedValue.ToString() + "'";
             }
             if (zp == 2)
             {
-                a = "Select ID_топлива from [Топливо] Where Название = '" + dataGridView1[2, 0].EditedFormattedValue.ToString() + "'";
+                a = "Select ID_топлива from [Топливо] Where Название = '" 
+                    + dataGridView1[2, 0].EditedFormattedValue.ToString() + "'";
             }
             if (zp == 3)
             {

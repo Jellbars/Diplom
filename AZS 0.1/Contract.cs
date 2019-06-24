@@ -16,6 +16,7 @@ namespace AZS_0._1
         public Contract()
         {
             InitializeComponent();
+            Load_data(0);
         }
 
         SqlConnection connection;
